@@ -5,6 +5,11 @@ class CompaniesController < ApplicationController
   # GET /companies.json
   def index
     @companies = Company.all
+    
+    respond_to do |format|  ## this method needs to be able to respond to html and csv
+      format.html
+      format.csv { render text: @companies.to_csv }
+    end
   end
 
   # GET /companies/1
