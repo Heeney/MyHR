@@ -3,7 +3,7 @@ class InvoiceSearch
   
   def initialize(params)
     params ||={} 
-    @date_from = parsed_date(params[:date_from], 7.days.ago.to_date.to_s) #Instance variables
+    @date_from = parsed_date(params[:date_from], 30.days.ago.to_date.to_s) #Instance variables
     @date_to = parsed_date(params[:date_to], Date.today.to_s) #built in date class , auto calls date for today and converts to string
   end
   
