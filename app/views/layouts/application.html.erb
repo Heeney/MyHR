@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Enterpriseape</title> 
+  <title>MyHR <%= @page_title%></title> 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %> <!-- Load all this first -->
@@ -21,7 +21,8 @@
       <li><%= link_to "FAQ", welcome_faq_path %></li>
       <li><%= link_to "Pricing", welcome_pricing_path %></li>
       <li><%= link_to "Invoices", invoices_path %></li>
-      
+      <li><%= link_to "Companies", companies_path %></li>
+      <li><%= link_to "Employees", employees_path %></li>
       
       <!---- User Login: If.else Block ---->
       <% if current_user %>
@@ -31,6 +32,8 @@
         <li><%= link_to "Sign In", new_user_session_path %></li> 
       <% end %>    
     </ul>
+    
+
 
     <% if flash[:notice] %>
       <div class="alert alert-success">
@@ -53,7 +56,15 @@
     <% end %>
     
   <%= yield %>
+    
+
+      
   </div>
+  	<footer>
+		<div class="container">
+			<p>Copyright &copy; 2015 All Rights Reserved</p>
+		</div>
+	</footer>
 
 </body>
 </html>

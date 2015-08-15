@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'welcome/faq'
   get 'welcome/pricing'
   get 'welcome/features'
+  get 'companies/index'
+  get 'employees/index'
 
   resources :invoices
   

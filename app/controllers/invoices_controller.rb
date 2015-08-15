@@ -4,6 +4,7 @@ class InvoicesController < ApplicationController
   # GET /invoices
   # GET /invoices.json
   def index
+    @page_title = 'Invoices'; 
     @search = InvoiceSearch.new(params[:search]) #Instance variable , passing in search params
     @invoices = @search.scope
   end

@@ -4,6 +4,7 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
+    @page_title = 'Companies'; 
     @companies = Company.all
     
     respond_to do |format|  ## this method needs to be able to respond to html and csv

@@ -40,8 +40,7 @@
   <%= submit_tag "Upload Companies", class: 'btn btn-default' %>
   <% end %>
 
-<h3>Download File</h3>
-
-<%= link_to 'Report', companies_path(format: "csv"), class: 'btn btn-default' %>
-
-<%= link_to 'New Company', new_company_path %>
+<h3>Download File</h3> 
+<%= link_to 'Download Report', companies_path(format: "csv"), class: 'btn btn-danger' %>
+<h3>Add New Company</h3> 
+<%= link_to 'New Company', new_company_path, class: 'btn btn-success' %>
