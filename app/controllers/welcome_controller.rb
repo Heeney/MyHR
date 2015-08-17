@@ -8,7 +8,7 @@ class WelcomeController < ApplicationController
   end
 
   def contact
-    @page_title = 'Contact Us';
+    @page_title = 'Contact ';
   end
 
   def faq

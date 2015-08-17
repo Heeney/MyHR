@@ -4,7 +4,7 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
-    @page_title = 'Companies'; 
+    @page_title = 'Overtime'; 
     @companies = Company.all
     
     respond_to do |format|  ## this method needs to be able to respond to html and csv
@@ -34,7 +34,7 @@ class CompaniesController < ApplicationController
 
     respond_to do |format|
       if @company.save
-        format.html { redirect_to @company, notice: 'Company was successfully created.' }
+        format.html { redirect_to @company, notice: 'Overtime was successfully created.' }
         format.json { render :show, status: :created, location: @company }
       else
         format.html { render :new }
@@ -48,7 +48,7 @@ class CompaniesController < ApplicationController
   def update
     respond_to do |format|
       if @company.update(company_params)
-        format.html { redirect_to @company, notice: 'Company was successfully updated.' }
+        format.html { redirect_to @company, notice: 'Overtime was successfully updated.' }
         format.json { render :show, status: :ok, location: @company }
       else
         format.html { render :edit }
@@ -62,14 +62,14 @@ class CompaniesController < ApplicationController
   def destroy
     @company.destroy
     respond_to do |format|
-      format.html { redirect_to companies_url, notice: 'Company was successfully destroyed.' }
+      format.html { redirect_to companies_url, notice: 'Overtime was successfully removed.' }
       format.json { head :no_content }
     end
   end
   
   def import
     Company.import(params[:file])
-    redirect_to companies_path, notice: "Companies Added Successfully"
+    redirect_to companies_path, notice: "Overtime Added Successfully"
   end
 
   private

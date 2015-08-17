@@ -6,18 +6,18 @@
 </p>
 
 <p>
-  <strong>Company:</strong>
+  <strong>Reason:</strong>
   <%= @invoice.company %>
 </p>
 
 <p>
-  <strong>Tax:</strong>
+  <strong>Duration:</strong>
   <%= @invoice.tax %>
 </p>
 
 <p>
-  <strong>Salesperson:</strong>
-  <%= @invoice.salesperson %>
+  <strong>Employee:</strong>
+  <%= @invoice.employee.name %>
 </p>
 
 <%= link_to 'Edit', edit_invoice_path(@invoice) %> |

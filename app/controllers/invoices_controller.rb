@@ -4,7 +4,7 @@ class InvoicesController < ApplicationController
   # GET /invoices
   # GET /invoices.json
   def index
-    @page_title = 'Invoices'; 
+    @page_title = 'Annual Leave'; 
     @search = InvoiceSearch.new(params[:search]) #Instance variable , passing in search params
     @invoices = @search.scope
   end
@@ -30,7 +30,7 @@ class InvoicesController < ApplicationController
 
     respond_to do |format|
       if @invoice.save
-        format.html { redirect_to @invoice, notice: 'Invoice was successfully created.' }
+        format.html { redirect_to @invoice, notice: 'Annual Leave was successfully added.' }
         format.json { render :show, status: :created, location: @invoice }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class InvoicesController < ApplicationController
   def update
     respond_to do |format|
       if @invoice.update(invoice_params)
-        format.html { redirect_to @invoice, notice: 'Invoice was successfully updated.' }
+        format.html { redirect_to @invoice, notice: 'Annual leave was successfully updated.' }
         format.json { render :show, status: :ok, location: @invoice }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class InvoicesController < ApplicationController
   def destroy
     @invoice.destroy
     respond_to do |format|
-      format.html { redirect_to invoices_url, notice: 'Invoice was successfully destroyed.' }
+      format.html { redirect_to invoices_url, notice: 'Annual Leave was successfully removed.' }
       format.json { head :no_content }
     end
   end

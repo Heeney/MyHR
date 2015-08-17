@@ -4,7 +4,7 @@
     <%= form_for @invoice, html: {class: 'form-horizontal'} do |f| %>
       <% if @invoice.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
+          <h2><%= pluralize(@invoice.errors.count, "error") %> prohibited this Annual from being saved:</h2> <!-- ERROR HANDLING -->
 
           <ul>
           <% @invoice.errors.full_messages.each do |message| %>
@@ -21,13 +21,13 @@
         </div>
       </div>
       <div class="control-group">
-        <%= f.label :company, class: 'control-label' %><br>
+        <%= f.label :Reason, class: 'control-label' %><br>
         <div class="controls">
           <%= f.text_field :company %>
          </div>
       </div>
       <div class="control-group">
-        <%= f.label :tax, class: 'control-label' %><br>
+        <%= f.label :duration, class: 'control-label' %><br>
         <div class="controls">
           <%= f.text_field :tax %>
          </div>
@@ -35,14 +35,14 @@
       <div class="control-group">
         <%= f.label :employee_id, class: 'control-label' %>
             <div class="controls">
-              <%= collection_select( :invoice, :employee_id, Employee.all, :id, :name, {}, { :multiple => false}) %>
+              <%= collection_select( :invoice, :employee_id, Employee.all, :id, :name, {}, { :multiple => false}) %> <!-- Enabling form Selection from DB in page -->
             </div>
       </div>
            
       <div class="control-group">
         <%= f.label "Status", class: 'control-label' %>
         <div class= "controls">
-          <%= f.select(:status_type, options_for_select([['PAID', 'PAID'], ['PENDING', 'PENDING']]), { include_blank: true}) %>
+          <%= f.select(:status_type, options_for_select([['CONFIRMED', 'CONFIRMED'], ['UNCONFIRMED', 'UNCONFIRMED']]), { include_blank: true}) %>
         </div>
       </div>
 
