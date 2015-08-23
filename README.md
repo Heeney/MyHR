@@ -1,25 +1,24 @@
-Enterprise Ape
+MyHR
 ================
 
-Powerful Software
+Human Reesource Management Application 
 -----------------
 
 ### Welcome to the Repostory
 
- Feel free to access [my portfolio] ().
+ Feel free to access my files and repository
 
 > ## Maecenas quis consectetur elit. 
 >
-> Nullam et tempor nisl. Proin sit amet hendrerit ante. Cras nec tortor egestas, auctor augue non, blandit metus. Nulla tellus te  llus, iaculis ac metus ullamcorper, feugiat consequat magna. 
+> This is an example of a human resource cloud application 
 >
-> Sed tincidunt est ac viverra fringilla. Integer a tincidunt *erat*.
+> 
 
-Sed tincidunt est ac viverra fringilla. Integer a tincidunt erat.
 
-### Crazy good software
-* Rapid Development
-+ Tested
-- 24/7 Support
+### Functions
+* Annual Leave Management
++ Employee Profile
+- Employee Overtime Scheduling
 
 ### Reasons to choose us
 1. Price

@@ -20,7 +20,12 @@
       <li><%= link_to "Features", welcome_features_path %></li>
       <li><%= link_to "FAQ", welcome_faq_path %></li>
 
-        <div class='btn-group pull-right right-nav'>
+
+      
+      <!---- User Login: If.else Block ---->
+      <% if current_user %>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+              <div class='btn-group pull-right right-nav'>
           <button type="button" class="btn btn-mini dropdown-toggle" data-toggle="dropdown">
             <span class="caret"></span>
             <span class="sr-only">Admin</span> <!-- ADMIN BUTTON ONLY APPEARS ON PAGE ONCE LOGGED IN -->
@@ -30,12 +35,8 @@
             <li><%= link_to "Employees", employees_path %></li>
             <li><%= link_to "Overtime Schedule", companies_path %></li>
             <ul>
-      </div>
+              </div>
       
-      <!---- User Login: If.else Block ---->
-      <% if current_user %>
-        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-
       <% else %>
         <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <li><%= link_to "Sign In", new_user_session_path %></li> 
@@ -66,12 +67,13 @@
     
   <%= yield %>
     
+    </div>
+   </div>
+    
 
-      
-  </div>
   	<footer>
 		<div class="container">
-			<p>Cloud Application Development - Frank Slyne</p>
+			<p> X14125552 - Cloud Application Development - Frank Slyne</p>
 		</div>
 	</footer>
 
